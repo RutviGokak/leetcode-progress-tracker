@@ -20,7 +20,35 @@ body {
 
   padding: 40px 20px;
 }
+.streak-box {
 
+  background:
+    rgba(30,41,59,0.7);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-bottom: 25px;
+
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.3);
+}
+
+#streakCount {
+
+  color: #f97316;
+}
 /* CONTAINER */
 .container {
 
