@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    radial-gradient(circle at top left,
+    #1e3a8a,
+    #020617 50%);
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: white;
+}
+
+/* BACKGROUND GLOW */
+.bg-glow {
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: #3b82f6;
+
+  filter: blur(180px);
+
+  opacity: 0.25;
+
+  top: -100px;
+  left: -100px;
+}
+
+/* AUTH CARD */
+.auth-box {
+
+  width: 380px;
+
+  background:
+    rgba(30, 41, 59, 0.7);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 40px 35px;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* MAIN TITLE */
+.auth-box h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* LOGIN/SIGNUP TITLE */
+.auth-box h2 {
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.auth-box input[type="text"],
+.auth-box input[type="password"] {
+
+  width: 100%;
+  height: 50px;
+
+  margin-bottom: 15px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: #334155;
+
+  padding: 0 15px;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+/* OPTIONS */
+.extra-options {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+
+  color: #cbd5e1;
+}
+
+/* FORGOT LINK */
+.extra-options a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+/* MAIN BUTTON */
+#submitBtn {
+
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #6366f1
+    );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+#submitBtn:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(99,102,241,0.4);
+}
+
+/* DIVIDER */
+.divider {
+
+  text-align: center;
+
+  margin: 25px 0;
+
+  color: #64748b;
+}
+
+/* SOCIAL BUTTON AREA */
+.socials {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* SOCIAL BUTTONS */
+.socials button {
+
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #0f172a;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* SOCIAL HOVER */
+.socials button:hover {
+  background: #1e293b;
+}
+
+/* TOGGLE TEXT */
+#toggleText {
+
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #cbd5e1;
+}
+
+/* TOGGLE LINK */
+#toggleText a {
+
+  color: #60a5fa;
+
+  text-decoration: none;
+
+  font-weight: 500;
+}

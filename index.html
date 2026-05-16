@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>LeetCode Progress Tracker Auth</title>
+
+  <link rel="stylesheet" href="auth.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="auth-box">
+
+  <h1>🚀 LeetCode Progress Tracker</h1>
+
+  <p class="subtitle">
+    Track your coding journey like a pro
+  </p>
+
+  <h2 id="formTitle">Login</h2>
+
+  <form id="authForm">
+
+    <input
+      type="text"
+      id="username"
+      placeholder="Username"
+      required
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      required
+    >
+
+    <div class="extra-options">
+      <label>
+        <input type="checkbox">
+        Remember me
+      </label>
+
+      <a href="#">Forgot?</a>
+    </div>
+
+    <button type="submit" id="submitBtn">
+      Login
+    </button>
+
+  </form>
+
+  <div class="divider">
+    <span>OR</span>
+  </div>
+
+  <div class="socials">
+
+    <button class="google-btn">
+      🔵 Continue with Google
+    </button>
+
+    <button class="github-btn">
+      ⚫ Continue with GitHub
+    </button>
+
+  </div>
+
+  <p id="toggleText"></p>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

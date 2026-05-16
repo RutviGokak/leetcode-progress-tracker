@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    radial-gradient(circle at top left,
+    #1e3a8a,
+    #020617 50%);
+
+  min-height: 100vh;
+
+  color: white;
+
+  padding: 40px 20px;
+}
+
+/* CONTAINER */
+.container {
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+/* TITLE */
+h1 {
+
+  text-align: center;
+
+  font-size: 42px;
+
+  margin-bottom: 35px;
+
+  font-weight: 700;
+}
+
+/* FORM */
+form {
+
+  background:
+    rgba(30,41,59,0.7);
+
+  backdrop-filter: blur(18px);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* INPUTS */
+input,
+select {
+
+  width: 100%;
+
+  height: 55px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 14px;
+
+  background: #334155;
+
+  color: white;
+
+  padding: 0 18px;
+
+  font-size: 15px;
+
+  appearance: none;
+}
+
+/* PLACEHOLDER */
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* REMOVE NUMBER ARROWS */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+/* SELECT */
+select {
+  cursor: pointer;
+}
+
+/* BUTTON */
+button {
+
+  width: 100%;
+
+  height: 55px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #38bdf8,
+      #6366f1
+    );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(99,102,241,0.4);
+}
+
+/* STATS */
+.stats {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+/* STAT CARDS */
+.stat-card {
+
+  background:
+    rgba(30,41,59,0.7);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  backdrop-filter: blur(18px);
+
+  transition: 0.3s;
+}
+
+/* STAT HOVER */
+.stat-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* NUMBER */
+.stat-card h3 {
+
+  font-size: 34px;
+
+  margin-bottom: 10px;
+}
+
+/* COLORS */
+.easy {
+  border-top: 4px solid #22c55e;
+}
+
+.medium {
+  border-top: 4px solid #facc15;
+}
+
+.hard {
+  border-top: 4px solid #ef4444;
+}
+
+/* CHART */
+.chart-box {
+
+  background:
+    rgba(30,41,59,0.7);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+
+  backdrop-filter: blur(18px);
+}
+
+/* CHART SIZE */
+canvas {
+
+  max-width: 350px !important;
+  max-height: 350px !important;
+}
+
+/* SEARCH */
+#searchInput {
+
+  margin-top: 30px;
+}
+
+/* LIST */
+#problemList {
+
+  margin-top: 25px;
+}
+
+/* PROBLEM CARD */
+.card {
+
+  background:
+    rgba(30,41,59,0.7);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 18px;
+
+  padding: 18px 20px;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  backdrop-filter: blur(18px);
+
+  transition: 0.3s;
+}
+
+/* CARD HOVER */
+.card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* BUTTON GROUP */
+.card div {
+
+  display: flex;
+  gap: 10px;
+}
+
+/* CARD BUTTONS */
+.card button {
+
+  width: 80px;
+  height: 40px;
+
+  border-radius: 10px;
+}
+
+/* EDIT BUTTON */
+.card button:first-child {
+
+  background: #22c55e;
+}
+
+/* DELETE BUTTON */
+.card button:last-child {
+
+  background: #ef4444;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .card {
+
+    flex-direction: column;
+    gap: 15px;
+
+    align-items: flex-start;
+  }
+
+  .card div {
+
+    width: 100%;
+  }
+
+  .card button {
+
+    flex: 1;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Progress Tracker</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🚀 LeetCode Progress Tracker</h1>
+
+  <!-- FORM -->
+  <form id="trackerForm">
+    <input type="text" id="problem" placeholder="Problem Name" required>
+
+    <select id="difficulty">
+      <option value="Easy">Easy</option>
+      <option value="Medium">Medium</option>
+      <option value="Hard">Hard</option>
+    </select>
+
+    <input type="text" id="topic" placeholder="Topic" required>
+    <input type="number" id="time" placeholder="Time (minutes)" required>
+
+    <button type="submit" id="submitBtn">Add</button>
+  </form>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat-card">
+      <h3 id="total">0</h3>
+      <p>Total</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="easyCount">0</h3>
+      <p>Easy</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="mediumCount">0</h3>
+      <p>Medium</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="hardCount">0</h3>
+      <p>Hard</p>
+    </div>
+  </div>
+
+  <!-- CHART -->
+  <div class="chart-box">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <!-- SEARCH -->
+  <input type="text" id="searchInput" placeholder="🔍 Search problems...">
+
+  <!-- LIST -->
+  <div id="problemList"></div>
+
+</div>
+
+<!-- JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
