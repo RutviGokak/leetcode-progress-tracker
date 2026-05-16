@@ -15,6 +15,11 @@ const submitBtn = document.getElementById("submitBtn");
 
 let problems = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
 let chart;
+let streak =
+  Number(localStorage.getItem("streak")) || 0;
+
+let lastSolvedDate =
+  localStorage.getItem("lastSolvedDate") || "";
 let editIndex = null; // 🔥 tracks which item is being edited
 
 function saveData() {
