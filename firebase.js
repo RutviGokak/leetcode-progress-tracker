@@ -38,11 +38,14 @@ const app =
 const auth =
   getAuth(app);
 
-const provider =
+const googleProvider =
   new GoogleAuthProvider();
 
 const githubProvider =
   new GithubAuthProvider();
+
+
+// GOOGLE LOGIN
 
 document.querySelector(".google-btn")
 .addEventListener("click", async () => {
@@ -50,7 +53,10 @@ document.querySelector(".google-btn")
   try {
 
     const result =
-      await signInWithPopup(auth, provider);
+      await signInWithPopup(
+        auth,
+        googleProvider
+      );
 
     const user =
       result.user;
@@ -68,6 +74,9 @@ document.querySelector(".google-btn")
     alert(error.message);
   }
 });
+
+
+// GITHUB LOGIN
 
 document.querySelector(".github-btn")
 .addEventListener("click", async () => {
