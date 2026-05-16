@@ -87,6 +87,9 @@ if (lastSolvedDate !== today) {
 }
   saveData();
   form.reset();
+  document.getElementById(
+  "streakCount"
+).innerText = streak;
   displayProblems();
 });
 
