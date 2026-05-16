@@ -20,6 +20,9 @@ body {
 
   padding: 40px 20px;
 }
+
+/* CONTAINER */
+.container 
 .streak-box {
 
   background:
@@ -49,8 +52,7 @@ body {
 
   color: #f97316;
 }
-/* CONTAINER */
-.container {
+{
 
   max-width: 1100px;
 
