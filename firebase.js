@@ -4,6 +4,7 @@ from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   getAuth,
   GoogleAuthProvider,
+  GithubAuthProvider,
   signInWithPopup
 }
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
@@ -37,8 +38,8 @@ const app =
 const auth =
   getAuth(app);
 
-const provider =
-  new GoogleAuthProvider();
+const githubProvider =
+  new GithubAuthProvider();
 
 document.querySelector(".google-btn")
 .addEventListener("click", async () => {
@@ -47,6 +48,34 @@ document.querySelector(".google-btn")
 
     const result =
       await signInWithPopup(auth, provider);
+
+    const user =
+      result.user;
+
+    localStorage.setItem(
+      "loggedInUser",
+      user.displayName
+    );
+
+    window.location.href =
+      "dashboard.html";
+
+  } catch (error) {
+
+    alert(error.message);
+  }
+});
+
+document.querySelector(".github-btn")
+.addEventListener("click", async () => {
+
+  try {
+
+    const result =
+      await signInWithPopup(
+        auth,
+        githubProvider
+      );
 
     const user =
       result.user;
