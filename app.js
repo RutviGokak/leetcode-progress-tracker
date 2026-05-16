@@ -49,7 +49,42 @@ form.addEventListener("submit", function(e) {
   editIndex = null;
   submitBtn.innerText = "Add";
 }
+const today =
+  new Date().toDateString();
 
+if (lastSolvedDate !== today) {
+
+  const yesterday =
+    new Date();
+
+  yesterday.setDate(
+    yesterday.getDate() - 1
+  );
+
+  if (
+    lastSolvedDate ===
+    yesterday.toDateString()
+  ) {
+
+    streak++;
+
+  } else {
+
+    streak = 1;
+  }
+
+  lastSolvedDate = today;
+
+  localStorage.setItem(
+    "streak",
+    streak
+  );
+
+  localStorage.setItem(
+    "lastSolvedDate",
+    lastSolvedDate
+  );
+}
   saveData();
   form.reset();
   displayProblems();
